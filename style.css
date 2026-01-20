@@ -1,0 +1,63 @@
+:root {
+  --calc-bg: #1e1b4b; /* Your Dark Charcoal Purple */
+  --display-bg: #0f172a;
+  --btn-number: #334155;
+  --btn-operator: #8b5cf6; /* Your Sunset Violet */
+  --text-light: #f8fafc;
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+  width: 350px;
+  background-color: var(--calc-bg);
+  padding: 15px;
+  border-radius: 12px;
+  gap: 10px;
+  margin: 100px auto;
+}
+
+.display {
+  grid-column: 1 / -1;
+  background-color: var(--display-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 15px;
+  border-radius: 8px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.current-operand {
+  color: var(--text-light);
+  font-size: 2.5rem;
+}
+
+.previous-operand {
+  color: rgba(248, 250, 252, 0.5);
+  font-size: 1.2rem;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--btn-number);
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  background-color: #475569;
+}
+
+.operator {
+  background-color: var(--btn-operator);
+}
+.span-two {
+  grid-column: span 2;
+}
